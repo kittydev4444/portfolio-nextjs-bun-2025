@@ -6,7 +6,7 @@ import { Metadata, Viewport } from "next";
 import { Providers } from "./providers";
 
 import { Navbar } from "@/components/navbar";
-import { fontSans } from "@/config/fonts";
+import { fontNunito } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -37,8 +37,8 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          "font-nunito min-h-screen bg-background antialiased",
+          fontNunito.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
