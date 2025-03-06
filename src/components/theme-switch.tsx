@@ -7,7 +7,8 @@ import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { FC } from "react";
 
-import { MoonFilledIcon, SunFilledIcon } from "@/components/icons";
+import { MoonFilledIcon } from "@/components/icons";
+import { Icon } from "@iconify/react";
 
 export interface ThemeSwitchProps {
   className?: string;
@@ -71,9 +72,12 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
         })}
       >
         {!isSelected || isSSR ? (
-          <SunFilledIcon size={22} />
+          <Icon
+            icon="lucide:sun"
+            className="text-kitty-yellow neon-yellow h-6 w-6"
+          />
         ) : (
-          <MoonFilledIcon size={22} />
+          <MoonFilledIcon size={24} />
         )}
       </div>
     </Component>

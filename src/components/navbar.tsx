@@ -1,112 +1,64 @@
+import { Link } from "@heroui/link";
 import {
   Navbar as HeroUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
   NavbarBrand,
+  NavbarContent,
   NavbarItem,
+  NavbarMenu,
   NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@heroui/navbar";
-import { Button } from "@heroui/button";
-import { Kbd } from "@heroui/kbd";
-import { Link } from "@heroui/link";
-import { Input } from "@heroui/input";
-import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
-import clsx from "clsx";
 
-import { siteConfig } from "@/config/site";
+import { GithubIcon } from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
-
+import { siteConfig } from "@/config/site";
+import { Button } from "@heroui/button";
+import { Icon } from "@iconify/react";
+import * as motion from "motion/react-client";
 export const Navbar = () => {
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  );
-
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
-          </NextLink>
-        </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
+    <HeroUINavbar
+      isBlurred
+      isBordered
+      className="dark:bg-kitty-dark/70 bg-white/70 backdrop-blur-md"
+    >
+      <NavbarBrand>
+        <motion.div
+          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.5 }}
+          className="flex items-center gap-2"
+        >
+          <Icon icon="noto:cat-face" className="h-8 w-8" />
+          <p className="font-bubblegum from-kitty-pink-hot to-kitty-blue bg-gradient-to-r bg-clip-text font-bold text-inherit">
+            Kitty<span className="text-kitty-orange">Dev</span>
+          </p>
+        </motion.div>
+      </NavbarBrand>
+
+      <NavbarContent className="hidden gap-4 sm:flex" justify="center">
+        {siteConfig.navItems.map((item, index) => (
+          <NavbarItem key={`${item.label}-${index}`}>
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
               <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
-                )}
                 color="foreground"
                 href={item.href}
+                className="font-bubblegum group relative"
               >
                 {item.label}
+                <span className="from-kitty-pink-hot to-kitty-blue absolute -bottom-1 left-0 h-1 w-0 bg-gradient-to-r transition-all duration-300 group-hover:w-full" />
               </NextLink>
-            </NavbarItem>
-          ))}
-        </ul>
+            </motion.div>
+          </NavbarItem>
+        ))}
       </NavbarContent>
 
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
-        <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
-          </Link>
-          <ThemeSwitch />
-        </NavbarItem>
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
-        <NavbarItem className="hidden md:flex">
-          <Button
-            isExternal
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
-            variant="flat"
-          >
-            Sponsor
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+      <NavbarContent className="basis-1 pl-4 sm:hidden" justify="end">
         <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
         </Link>
@@ -114,20 +66,51 @@ export const Navbar = () => {
         <NavbarMenuToggle />
       </NavbarContent>
 
+      <NavbarContent
+        justify="end"
+        className="hidden basis-1/5 sm:flex sm:basis-full"
+      >
+        <NavbarItem className="hidden gap-2 sm:flex">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ThemeSwitch />
+          </motion.div>
+        </NavbarItem>
+        <NavbarItem className="hidden sm:flex">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <Button
+              as={Link}
+              color="primary"
+              href="#contact"
+              variant="flat"
+              className="font-bubblegum from-kitty-pink-hot to-kitty-blue bg-gradient-to-r text-white shadow-lg"
+            >
+              Meow At Me!
+            </Button>
+          </motion.div>
+        </NavbarItem>
+      </NavbarContent>
+
       <NavbarMenu>
-        {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
+          {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
                 color={
                   index === 2
                     ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
+                    : index === siteConfig.navItems.length - 1
                       ? "danger"
                       : "foreground"
                 }
-                href="#"
+                href={item.href}
                 size="lg"
               >
                 {item.label}
