@@ -122,38 +122,3 @@ h4,
     background-position: 0% 50%;
   }
 }
-
-.neon-text {
-  text-shadow:
-    0 0 5px #f692b2,
-    0 0 10px #f692b2,
-    0 0 15px #f692b2;
-}
-
-.neon-blue {
-  text-shadow:
-    0 0 5px #6ec1d6,
-    0 0 10px #6ec1d6,
-    0 0 15px #6ec1d6;
-}
-
-.neon-green {
-  text-shadow:
-    0 0 5px #94cf95,
-    0 0 10px #94cf95,
-    0 0 15px #94cf95;
-}
-
-.neon-yellow {
-  text-shadow:
-    0 0 5px #ffffa5,
-    0 0 10px #ffffa5,
-    0 0 15px #ffffa5;
-}
-
-.neon-orange {
-  text-shadow:
-    0 0 5px #ffcb6b,
-    0 0 10px #ffcb6b,
-    0 0 15px #ffcb6b;
-}

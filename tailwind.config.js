@@ -73,5 +73,22 @@ module.exports = {
       },
     },
   },
-  plugins: [heroui()],
+  plugins: [
+    heroui(),
+    function ({ addUtilities, theme }) {
+      const newUtilities = {
+        ".neon-yellow": {
+          textShadow: `0 0 5px ${theme("colors.kitty.yellow")}, 
+                       0 0 10px ${theme("colors.kitty.yellow")}, 
+                       0 0 15px ${theme("colors.kitty.yellow")}`,
+        },
+        ".neon-text": {
+          textShadow: `0 0 5px ${theme("colors.kitty.pink-hot")}, 
+                       0 0 10px ${theme("colors.kitty.pink-hot")}, 
+                       0 0 15px ${theme("colors.kitty.pink-hot")}`,
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 };
