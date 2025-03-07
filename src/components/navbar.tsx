@@ -11,7 +11,6 @@ import {
 import NextLink from "next/link";
 
 import { GithubIcon } from "@/components/icons";
-import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
 import { Button } from "@heroui/button";
 import { Icon } from "@iconify/react";
@@ -63,7 +62,7 @@ export const Navbar = () => {
         <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
         </Link>
-        <ThemeSwitch />
+        {/* <ThemeSwitch /> */}
         <NavbarMenuToggle />
       </NavbarContent>
 
@@ -77,7 +76,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <ThemeSwitch />
+            {/* <ThemeSwitch /> */}
           </motion.div>
         </NavbarItem>
         <NavbarItem className="hidden sm:flex">
