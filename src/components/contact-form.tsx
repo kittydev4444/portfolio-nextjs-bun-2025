@@ -45,7 +45,7 @@ export function ContactForm() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="gradient-border overflow-hidden rounded-lg bg-white p-6 shadow-xl dark:bg-kitty-dark md:p-8"
+      className="overflow-hidden rounded-lg bg-kitty-dark p-6 shadow-xl md:p-8"
     >
       <h3 className="mb-6 flex items-center gap-2 font-bubblegum text-2xl font-bold">
         <Icon icon="noto:cat-face" className="h-8 w-8" />

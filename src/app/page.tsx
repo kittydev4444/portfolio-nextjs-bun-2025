@@ -7,7 +7,7 @@ import Skill from "@/components/sections/skill";
 export default function Home() {
   return (
     <>
-      <div className="relative overflow-x-hidden">
+      <div className="relative overflow-hidden">
         <div className="absolute inset-0 z-0 bg-cyber-grid-dark bg-[size:10px_50px]" />
         <Hero />
         <About />
