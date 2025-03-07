@@ -21,7 +21,8 @@ export const Navbar = () => {
     <HeroUINavbar
       isBlurred
       isBordered
-      className="dark:bg-kitty-dark/70 bg-white/70 backdrop-blur-md"
+      shouldHideOnScroll
+      className="fixed bg-white/70 backdrop-blur-md dark:bg-kitty-dark/70"
     >
       <NavbarBrand>
         <motion.div
@@ -31,7 +32,7 @@ export const Navbar = () => {
           className="flex items-center gap-2"
         >
           <Icon icon="noto:cat-face" className="h-8 w-8" />
-          <p className="font-bubblegum from-kitty-pink-hot to-kitty-blue bg-gradient-to-r bg-clip-text font-bold text-inherit">
+          <p className="bg-gradient-to-r from-kitty-pink-hot to-kitty-blue bg-clip-text font-bubblegum font-bold text-inherit">
             Kitty<span className="text-kitty-orange">Dev</span>
           </p>
         </motion.div>
@@ -48,10 +49,10 @@ export const Navbar = () => {
               <NextLink
                 color="foreground"
                 href={item.href}
-                className="font-bubblegum group relative"
+                className="group relative font-bubblegum"
               >
                 {item.label}
-                <span className="from-kitty-pink-hot to-kitty-blue absolute -bottom-1 left-0 h-1 w-0 bg-gradient-to-r transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 h-1 w-0 bg-gradient-to-r from-kitty-pink-hot to-kitty-blue transition-all duration-300 group-hover:w-full" />
               </NextLink>
             </motion.div>
           </NavbarItem>
@@ -90,7 +91,7 @@ export const Navbar = () => {
               color="primary"
               href="#contact"
               variant="flat"
-              className="font-bubblegum from-kitty-pink-hot to-kitty-blue bg-gradient-to-r text-white shadow-lg"
+              className="bg-gradient-to-r from-kitty-pink-hot to-kitty-blue font-bubblegum text-white shadow-lg"
             >
               Meow At Me!
             </Button>
