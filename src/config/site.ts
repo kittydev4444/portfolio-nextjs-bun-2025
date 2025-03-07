@@ -1,4 +1,4 @@
-import { Experience, Project, Skill } from "@/types";
+import { Experience, Project, Skill, SocialLink } from "@/types";
 
 export type SiteConfig = typeof siteConfig;
 
@@ -180,5 +180,28 @@ export const projects: Project[] = [
     tags: ["React Native", "OpenWeather API", "Lottie"],
     demoUrl: "https://example.com",
     repoUrl: "https://github.com",
+  },
+];
+
+export const socialLinks: SocialLink[] = [
+  {
+    name: "GitHub",
+    url: "https://github.com",
+    icon: "mdi:github",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com",
+    icon: "mdi:linkedin",
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com",
+    icon: "mdi:twitter",
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com",
+    icon: "mdi:instagram",
   },
 ];

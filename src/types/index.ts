@@ -26,3 +26,9 @@ export type Project = {
   demoUrl?: string;
   repoUrl?: string;
 };
+
+export type SocialLink = {
+  name: string;
+  url: string;
+  icon: string;
+};
