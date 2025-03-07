@@ -11,3 +11,9 @@ export type Experience = {
   period: string;
   details?: string;
 };
+
+export type Skill = {
+  name: string;
+  icon: string;
+  color: string;
+};

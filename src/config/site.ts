@@ -1,4 +1,4 @@
-import { Experience } from "@/types";
+import { Experience, Skill } from "@/types";
 
 export type SiteConfig = typeof siteConfig;
 
@@ -15,12 +15,12 @@ export const siteConfig = {
       href: "#about",
     },
     {
-      label: "Projects",
-      href: "#projects",
-    },
-    {
       label: "Skills",
       href: "#skills",
+    },
+    {
+      label: "Projects",
+      href: "#projects",
     },
     {
       label: "Contact",
@@ -88,5 +88,58 @@ export const education: Experience[] = [
     title: "Khon Kean University",
     description: "Bachelor's Degree, Computer Science",
     period: "July 2020",
+  },
+];
+
+export const skills: Skill[] = [
+  {
+    name: "React",
+    icon: "logos:react",
+    color: "text-blue-500",
+  },
+  {
+    name: "TypeScript",
+    icon: "logos:typescript-icon",
+    color: "text-kitty-blue",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "logos:tailwindcss-icon",
+    color: "text-cyan-500",
+  },
+  {
+    name: "Next.js",
+    icon: "logos:nextjs-icon",
+    color: "text-gray-800 dark:text-white",
+  },
+  {
+    name: "Node.js",
+    icon: "logos:nodejs-icon",
+    color: "text-kitty-green",
+  },
+  {
+    name: "GraphQL",
+    icon: "logos:graphql",
+    color: "text-kitty-pink-hot",
+  },
+  {
+    name: "Prisma",
+    icon: "logos:prisma",
+    color: "text-indigo-500",
+  },
+  {
+    name: "Docker",
+    icon: "logos:docker-icon",
+    color: "text-kitty-blue",
+  },
+  {
+    name: "Git",
+    icon: "logos:git-icon",
+    color: "text-kitty-orange",
+  },
+  {
+    name: "Figma",
+    icon: "logos:figma",
+    color: "text-purple-500",
   },
 ];
