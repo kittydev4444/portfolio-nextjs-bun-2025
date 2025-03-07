@@ -39,13 +39,6 @@ body {
 }
 
 /* Make light mode less stark white */
-body {
-  @apply bg-gray-50;
-}
-
-.dark body {
-  @apply bg-kitty-dark;
-}
 
 h1,
 h2,

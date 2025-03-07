@@ -1,9 +1,9 @@
 import { aboutMe, education, experiences } from "@/config/site";
 import { type Experience } from "@/types";
 import { Card, CardBody } from "@heroui/card";
-import { Divider } from "@heroui/divider";
 import { Icon } from "@iconify/react";
 import * as motion from "motion/react-client";
+import { HeadingSection } from "../heading-section";
 
 type Stat = {
   icon: string;
@@ -40,10 +40,7 @@ export default function About() {
   ];
 
   return (
-    <section
-      id="about"
-      className="min-h-screen bg-gray-100 py-20 dark:bg-kitty-dark"
-    >
+    <section id="about" className="min-h-screen py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,11 +52,7 @@ export default function About() {
           <div className="mb-2 flex justify-center">
             <Icon icon={aboutMe.icon} className="text-4xl" />
           </div>
-          <h2 className="text-light mb-2 text-3xl font-bold">
-            {aboutMe.header}
-          </h2>
-          <p className="text-light-muted">{aboutMe.subHeader}</p>
-          <Divider className="mx-auto my-4 max-w-xs" />
+          <HeadingSection title={aboutMe.header} subtitle={aboutMe.subHeader} />
         </motion.div>
 
         <div className="flex flex-col items-center gap-8 md:flex-row">
@@ -70,7 +63,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-dark-100 text-light border-none">
+            <Card className="text-light border-none bg-kitty-dark">
               <CardBody>
                 <h3 className="text-accent-yellow mb-4 text-xl font-semibold">
                   {aboutMe.title}
@@ -93,7 +86,7 @@ export default function About() {
           >
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               {stats.map((stat, index) => (
-                <Card key={index} className="bg-dark-100 border-none">
+                <Card key={index} className="border-none bg-kitty-dark">
                   <CardBody className="flex flex-col items-center p-6 text-center">
                     <div className="mb-4 rounded-full bg-primary/10 p-3">
                       <Icon
@@ -110,7 +103,7 @@ export default function About() {
               ))}
             </div>
 
-            <Card className="bg-dark-100 mt-4 border-none">
+            <Card className="mt-4 border-none bg-kitty-dark">
               <CardBody>
                 <h3 className="text-accent-yellow mb-4 text-xl font-semibold">
                   Kitty Education & Experience

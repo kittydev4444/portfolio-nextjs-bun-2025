@@ -9,10 +9,9 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex h-screen min-h-screen items-center overflow-hidden bg-gray-50 font-nunito dark:bg-kitty-dark"
+      className="relative flex min-h-screen items-center overflow-hidden font-nunito"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-white to-kitty-blue/20 bg-[size:50px_50px] light:bg-cyber-grid dark:bg-cyber-grid-dark dark:from-kitty-dark dark:to-kitty-darker" />
 
       <RandomStars count={15} />
 

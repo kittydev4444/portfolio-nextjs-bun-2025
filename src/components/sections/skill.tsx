@@ -7,7 +7,7 @@ export default function Skill() {
   return (
     <section
       id="skills"
-      className="relative min-h-screen overflow-hidden bg-gray-50 bg-gradient-to-br from-kitty-pink to-kitty-orange py-20 dark:bg-gradient-to-bl dark:from-kitty-dark dark:to-kitty-green-dark"
+      className="relative overflow-hidden bg-gradient-to-br py-20 dark:bg-gradient-to-bl"
     >
       {/* Floating kitty bubbles */}
       <div className="absolute right-10 top-10">
