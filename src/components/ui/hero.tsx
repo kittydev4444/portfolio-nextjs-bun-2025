@@ -9,10 +9,10 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden py-20"
+      className="relative flex h-screen min-h-screen items-center overflow-hidden bg-gray-50 font-nunito dark:bg-kitty-dark"
     >
       {/* Background gradient */}
-      <div className="to-kitty-blue/20 dark:from-kitty-dark dark:to-kitty-darker light:bg-cyber-grid dark:bg-cyber-grid-dark absolute inset-0 z-0 bg-gradient-to-br from-white bg-[size:50px_50px]" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-white to-kitty-blue/20 bg-[size:50px_50px] light:bg-cyber-grid dark:bg-cyber-grid-dark dark:from-kitty-dark dark:to-kitty-darker" />
 
       <RandomStars count={15} />
 
@@ -20,27 +20,27 @@ export default function Hero() {
       <div className="absolute right-10 top-20 z-10">
         <KittyBubble
           size="md"
-          className="from-kitty-pink to-kitty-green-pale bg-gradient-to-br"
+          className="bg-gradient-to-br from-kitty-pink to-kitty-green-pale"
           delay={2}
         />
       </div>
       <div className="absolute bottom-20 left-10 z-10">
         <KittyBubble
           size="sm"
-          className="from-kitty-green-pale to-kitty-orange bg-gradient-to-br"
+          className="bg-gradient-to-br from-kitty-green-pale to-kitty-orange"
           delay={1}
         />
       </div>
       <div className="absolute left-20 top-40 z-10">
         <KittyBubble
           size="lg"
-          className="from-kitty-orange-pale to-kitty-pink bg-gradient-to-br"
+          className="bg-gradient-to-br from-kitty-orange-pale to-kitty-pink"
         />
       </div>
       <div className="absolute bottom-40 right-20 z-10">
         <KittyBubble
           size="sm"
-          className="from-kitty-blue-light to-kitty-pink-hot bg-gradient-to-br"
+          className="bg-gradient-to-br from-kitty-blue-light to-kitty-pink-hot"
           delay={1.5}
         />
       </div>
@@ -53,16 +53,16 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="flex-1"
           >
-            <h1 className="font-bubblegum mb-4 text-4xl font-bold md:text-6xl">
+            <h1 className="mb-4 font-bubblegum text-4xl font-bold md:text-6xl">
               <span className="block">Meowllo! I&lsquo;m</span>
-              <span className="from-kitty-pink-hot to-kitty-blue neon-text bg-gradient-to-r bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-kitty-pink-hot to-kitty-blue bg-clip-text text-transparent neon-text">
                 Kitty Developer
               </span>
             </h1>
-            <p className="text-kitty-dark/80 dark:text-kitty-light/80 mb-8 text-xl">
+            <p className="mb-8 text-xl text-kitty-dark/80 dark:text-kitty-light/80">
               A{" "}
               <span className="relative inline-block">
-                <span className="from-kitty-pink-hot to-kitty-blue animate-jiggle absolute -bottom-1 left-0 right-0 h-2 bg-gradient-to-r" />
+                <span className="absolute -bottom-1 left-0 right-0 h-2 animate-jiggle bg-gradient-to-r from-kitty-pink-hot to-kitty-blue" />
                 cyberpunk
               </span>{" "}
               frontend developer who creates purr-fect web experiences with a
@@ -71,7 +71,7 @@ export default function Hero() {
             <div className="flex gap-4">
               <Button
                 size="lg"
-                className="font-bubblegum from-kitty-pink-hot to-kitty-blue bg-gradient-to-r text-white shadow-lg transition-all hover:shadow-xl"
+                className="bg-gradient-to-r from-kitty-pink-hot to-kitty-blue font-bubblegum text-white shadow-lg transition-all hover:shadow-xl"
                 endContent={<Icon icon="lucide:arrow-right" />}
                 as="a"
                 href="#projects"
@@ -81,7 +81,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 variant="bordered"
-                className="font-bubblegum border-kitty-blue dark:border-kitty-blue-light text-kitty-blue dark:text-kitty-blue-light"
+                className="border-kitty-blue font-bubblegum text-kitty-blue dark:border-kitty-blue-light dark:text-kitty-blue-light"
                 as="a"
                 href="#contact"
               >
@@ -97,8 +97,8 @@ export default function Hero() {
             className="flex flex-1 justify-center"
           >
             <div className="relative">
-              <div className="from-kitty-pink-hot to-kitty-blue animate-float gradient-border h-64 w-64 rounded-full bg-gradient-to-br p-1 md:h-80 md:w-80">
-                <div className="dark:bg-kitty-dark relative h-full w-full overflow-hidden rounded-full bg-white">
+              <div className="gradient-border h-64 w-64 animate-float rounded-full bg-gradient-to-br from-kitty-pink-hot to-kitty-blue p-1 md:h-80 md:w-80">
+                <div className="relative h-full w-full overflow-hidden rounded-full bg-white dark:bg-kitty-dark">
                   <Image
                     src="/assets/images/hero-img.jpg"
                     alt="Picture of the author"
@@ -108,8 +108,8 @@ export default function Hero() {
                   />
                 </div>
               </div>
-              <div className="dark:bg-kitty-dark absolute -bottom-4 -right-4 rounded-full bg-white p-2 shadow-lg">
-                <div className="from-kitty-green-pale to-kitty-green rounded-full bg-gradient-to-br p-2">
+              <div className="absolute -bottom-4 -right-4 rounded-full bg-white p-2 shadow-lg dark:bg-kitty-dark">
+                <div className="rounded-full bg-gradient-to-br from-kitty-green-pale to-kitty-green p-2">
                   <Icon
                     icon="noto:cat-with-tears-of-joy"
                     className="h-10 w-10"
