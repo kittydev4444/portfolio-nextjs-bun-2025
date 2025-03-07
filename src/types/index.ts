@@ -17,3 +17,12 @@ export type Skill = {
   icon: string;
   color: string;
 };
+
+export type Project = {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  demoUrl?: string;
+  repoUrl?: string;
+};

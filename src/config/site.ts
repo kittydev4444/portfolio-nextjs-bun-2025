@@ -1,4 +1,4 @@
-import { Experience, Skill } from "@/types";
+import { Experience, Project, Skill } from "@/types";
 
 export type SiteConfig = typeof siteConfig;
 
@@ -141,5 +141,44 @@ export const skills: Skill[] = [
     name: "Figma",
     icon: "logos:figma",
     color: "text-purple-500",
+  },
+];
+
+export const projects: Project[] = [
+  {
+    title: "Kitty Code Editor",
+    description:
+      "A purr-fect code editor with syntax highlighting and auto-completion for all your coding needs.",
+    image: "https://picsum.photos/seed/kitty1/600/400",
+    tags: ["React", "TypeScript", "Monaco Editor"],
+    demoUrl: "https://example.com",
+    repoUrl: "https://github.com",
+  },
+  {
+    title: "Paw-some Dashboard",
+    description:
+      "A dashboard with real-time analytics and cute kitty-themed visualizations.",
+    image: "https://picsum.photos/seed/kitty2/600/400",
+    tags: ["Next.js", "Tailwind CSS", "Chart.js"],
+    demoUrl: "https://example.com",
+    repoUrl: "https://github.com",
+  },
+  {
+    title: "Meow Messenger",
+    description:
+      "A real-time chat application with end-to-end encryption and kitty stickers.",
+    image: "https://picsum.photos/seed/kitty3/600/400",
+    tags: ["React", "Firebase", "WebRTC"],
+    demoUrl: "https://example.com",
+    repoUrl: "https://github.com",
+  },
+  {
+    title: "Whisker Weather",
+    description:
+      "A weather app that shows the forecast with cute kitty illustrations for each weather condition.",
+    image: "https://picsum.photos/seed/kitty4/600/400",
+    tags: ["React Native", "OpenWeather API", "Lottie"],
+    demoUrl: "https://example.com",
+    repoUrl: "https://github.com",
   },
 ];
