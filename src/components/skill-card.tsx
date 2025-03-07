@@ -16,6 +16,7 @@ export function SkillCard({ skill, index }: SkillCardProps) {
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
+      viewport={{ once: true }}
       whileHover={{ y: -5 }}
     >
       <Card className="border-none shadow-md transition-all hover:shadow-lg">
