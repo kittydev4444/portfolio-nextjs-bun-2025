@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { Link } from "@heroui/link";
+// import { Link } from "@heroui/link";
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
 
@@ -37,17 +37,17 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "font-nunito min-h-screen bg-background antialiased",
+          "min-h-screen bg-background font-nunito antialiased",
           fontNunito.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex h-screen flex-col">
             <Navbar />
-            <main className="dark:bg-kitty-dark text-kitty-dark dark:text-kitty-light font-nunito min-h-screen bg-gray-50">
+            <main className="font-nunito text-kitty-dark dark:text-kitty-light">
               {children}
             </main>
-            <footer className="flex w-full items-center justify-center py-3">
+            {/* <footer className="flex w-full items-center justify-center py-3">
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
@@ -57,7 +57,7 @@ export default function RootLayout({
                 <span className="text-default-600">Powered by</span>
                 <p className="text-primary">HeroUI</p>
               </Link>
-            </footer>
+            </footer> */}
           </div>
         </Providers>
       </body>
