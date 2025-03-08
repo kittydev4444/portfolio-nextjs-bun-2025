@@ -1,8 +1,10 @@
-import { socialLinks } from "@/config/site";
+import { aboutMe, socialLinks } from "@/config/site";
+import { cn } from "@/utils/cn";
 import { Card, CardBody } from "@heroui/card";
 import { Chip } from "@heroui/chip";
 import { Icon } from "@iconify/react";
 import * as motion from "motion/react-client";
+import { HTMLProps } from "react";
 import { ContactForm } from "../contact-form";
 import { HeadingSection } from "../heading-section";
 import RandomStars from "../random-star";
@@ -34,36 +36,21 @@ export default function Contact() {
               </p>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <Card className="gradient-border overflow-hidden border-none shadow-md transition-all duration-300 hover:shadow-lg">
-                  <CardBody className="flex items-center gap-4 p-4">
-                    <div className="rounded-full bg-gradient-to-br from-kitty-pink-hot to-kitty-blue p-3 text-white">
-                      <Icon icon="lucide:mail" className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-bubblegum font-medium">Email</h4>
-                      <p className="text-kitty-dark/70 dark:text-kitty-light/70">
-                        meow@kittydev.com
-                      </p>
-                    </div>
-                  </CardBody>
-                </Card>
-
-                <Card className="gradient-border overflow-hidden border-none shadow-md transition-all duration-300 hover:shadow-lg">
-                  <CardBody className="flex items-center gap-4 p-4">
-                    <div className="rounded-full bg-gradient-to-br from-kitty-green-pale to-kitty-green p-3 text-white">
-                      <Icon icon="lucide:map-pin" className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-bubblegum font-medium">Location</h4>
-                      <p className="text-kitty-dark/70 dark:text-kitty-light/70">
-                        Cyberpunk Kitty City
-                      </p>
-                    </div>
-                  </CardBody>
-                </Card>
+                <CardComponent
+                  title="Email"
+                  des={aboutMe.email}
+                  icon="lucide:mail"
+                  className="from-kitty-pink-hot to-kitty-blue"
+                />
+                <CardComponent
+                  title="Location"
+                  des={"Cyberpunk Kitty City"}
+                  icon="lucide:map-pin"
+                  className="from-kitty-green-pale to-kitty-orange"
+                />
               </div>
 
-              <Card className="gradient-border overflow-hidden border-none shadow-md transition-all duration-300 hover:shadow-lg">
+              <Card className="gradient-border overflow-hidden border-none bg-kitty-dark shadow-md transition-all duration-300 hover:shadow-lg">
                 <CardBody className="p-4">
                   <h4 className="mb-3 font-bubblegum font-medium">
                     Paw-some Skills
@@ -121,3 +108,34 @@ export default function Contact() {
     </section>
   );
 }
+
+const CardComponent = ({
+  title,
+  des,
+  icon,
+  className,
+}: {
+  title: string;
+  des: string;
+  icon: string;
+  className?: HTMLProps<HTMLElement>["className"];
+}) => {
+  return (
+    <Card className="overflow-hidden border-none bg-kitty-dark shadow-md transition-all duration-300 hover:shadow-lg">
+      <CardBody className="flex items-center gap-4 p-4">
+        <div
+          className={cn(
+            `rounded-full bg-gradient-to-br from-kitty-pink-hot to-kitty-blue p-3 text-white`,
+            className,
+          )}
+        >
+          <Icon icon={icon} className="h-6 w-6" />
+        </div>
+        <div>
+          <h4 className="font-bubblegum font-medium">{title}</h4>
+          <p className="text-kitty-dark/70 dark:text-kitty-light/70">{des}</p>
+        </div>
+      </CardBody>
+    </Card>
+  );
+};
