@@ -34,8 +34,8 @@ const ExperienceComponent = ({
 
 export default function About() {
   const stats: Stat[] = [
-    { icon: "noto:fish", label: "Fish Caught", value: "500+" },
-    { icon: "noto:mouse", label: "Mice Chased", value: "150+" },
+    { icon: "noto:fish", label: "Company Projects", value: "8+" },
+    { icon: "noto:mouse", label: "Personal Projects", value: "20+" },
     { icon: "noto:yarn", label: "Yarn Balls", value: "75+" },
   ];
 
