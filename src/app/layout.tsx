@@ -6,6 +6,7 @@ import { Metadata, Viewport } from "next";
 import { Providers } from "./providers";
 
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/sections/footer";
 import { fontNunito } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 
@@ -47,17 +48,7 @@ export default function RootLayout({
             <main className="relative font-nunito text-kitty-dark dark:text-kitty-light">
               {children}
             </main>
-            {/* <footer className="flex w-full items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://heroui.com?utm_source=next-app-template"
-                title="heroui.com homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">HeroUI</p>
-              </Link>
-            </footer> */}
+            <Footer />
           </div>
         </Providers>
       </body>
