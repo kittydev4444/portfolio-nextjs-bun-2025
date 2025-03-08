@@ -37,41 +37,25 @@ export const aboutMe = {
   email: "jeerasak.dev@gmail.com",
   descriptions: [
     {
-      text: "I'm Captain Whiskers, a fearless feline Frontend Developer with 5+ cat years of experience creating modern and responsive web applications. I specialize in React, TypeScript, and chasing the red dot of inspiration",
+      text: "I’m a Frontend Developer with 1.9 years of experience creating modern and responsive web applications. I specialize in React, Nextjs and Typescript.",
     },
     {
-      text: "My journey in web development started when I was just a kitten, and since then, I've worked with various clients from startups to established companies, helping them build user-friendly interfaces and improve their digital presence with my super kitty powers.",
+      text: "My journey in web development started early, and over the years, I’ve built user-friendly interfaces in the startups company. Currently, I’m focused on expanding my skills as a Web3 frontend developer, connecting with smart contracts and working with networks like Ethereum and Solana.",
     },
     {
-      text: "When I‘m not coding, you can find me napping in sunny spots, chasing laser pointers, or experimenting with new technologies. I‘m always eager to learn and grow in this ever-evolving field, one paw at a time.",
+      text: "When I’m not coding, I’m exploring new technologies and tools, always looking for ways to improve and stay up-to-date in this fast-evolving field.",
     },
   ],
 };
 
 export const experiences: Experience[] = [
   {
-    icon: "noto:graduation-cap",
-    title: "Senior Frontend Developer",
-    description: "Kitty Tech Inc.",
-    period: "2022 - Present",
-    details:
-      "Leading the frontend development team, implementing new features, and mentoring junior developers.",
-  },
-  {
-    icon: "noto:graduation-cap",
+    icon: "noto-v1:artist-palette",
     title: "Frontend Developer",
-    description: "Paw Digital",
-    period: "2020 - 2022",
+    description: "ChomCHOB",
+    period: "2022 - 2024",
     details:
-      "Developed responsive web applications using React, TypeScript, and Tailwind CSS.",
-  },
-  {
-    icon: "noto:graduation-cap",
-    title: "UI/UX Designer",
-    description: "Whisker Designs",
-    period: "2018 - 2020",
-    details:
-      "Created user interfaces and experiences for web and mobile applications.",
+      "Developed responsive web applications using React, Nextjs, TypeScript, and Tailwind CSS.",
   },
 ];
 
@@ -91,6 +75,11 @@ export const skills: Skill[] = [
     color: "text-blue-500",
   },
   {
+    name: "Next.js",
+    icon: "logos:nextjs-icon",
+    color: "text-gray-800 dark:text-white",
+  },
+  {
     name: "TypeScript",
     icon: "logos:typescript-icon",
     color: "text-kitty-blue",
@@ -99,11 +88,6 @@ export const skills: Skill[] = [
     name: "Tailwind CSS",
     icon: "logos:tailwindcss-icon",
     color: "text-cyan-500",
-  },
-  {
-    name: "Next.js",
-    icon: "logos:nextjs-icon",
-    color: "text-gray-800 dark:text-white",
   },
   {
     name: "Node.js",
@@ -139,6 +123,49 @@ export const skills: Skill[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    id: 6,
+    title: "Fizzy",
+    tags: ["Next JS", "Prismic", "Tailwind", "ThreeJS", "GSAP"],
+    description:
+      "A 3D Project with the GSAP scrollTrigger that show the smooth animation while scrolling",
+    image: "/assets/images/fizzy.png",
+    demoUrl: "https://next14-threejs-gsap-prismic-ts.vercel.app",
+    repoUrl: "https://github.com/FourSqweez/next14-threejs-gsap-prismic-ts",
+  },
+  {
+    id: 7,
+    title: "Pet Soft",
+    tags: ["Next JS", "NextAuth", "Zod", "Stripe", "Prisma"],
+    description:
+      "Pet take care...using react 19 with server action and optimistic ui",
+    image: "/assets/images/PetSoft.jpeg",
+    demoUrl: "https://petsoft-two-sigma.vercel.app/",
+    repoUrl:
+      "https://github.com/FourSqweez/modern-react-nextjs-courses/tree/main/petsoft",
+  },
+  {
+    id: 8,
+    title: "Rmt Dev",
+    tags: ["React JS", "React Query", "Context API", "Custom hooks"],
+    description:
+      "A web page for finding jobs, using react query for fetching and client catching, Context API for global state, URL State for sharing specific page with data",
+    image: "/assets/images/rmtDev.jpeg",
+    demoUrl: "https://rmtdev-six.vercel.app/",
+    repoUrl:
+      "https://github.com/FourSqweez/modern-react-nextjs-courses/tree/main/rmtdev",
+  },
+  {
+    id: 9,
+    title: "Corp Comment",
+    tags: ["React JS", "Zustand"],
+    description:
+      "The website to give feedback for the big company using Zustand for global state",
+    image: "/assets/images/CorpComment.jpeg",
+    demoUrl: "https://corpcomment-three.vercel.app/",
+    repoUrl:
+      "https://github.com/FourSqweez/modern-react-nextjs-courses/tree/main/corpcomment",
+  },
   {
     id: 1,
     title: "Movie Hub",
