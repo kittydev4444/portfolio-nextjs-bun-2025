@@ -34,6 +34,7 @@ export const aboutMe = {
   header: "About This Kitty",
   subHeader: "Get to know the hero behind the whiskers",
   title: "Who am I?",
+  email: "jeerasak.dev@gmail.com",
   descriptions: [
     {
       text: "I'm Captain Whiskers, a fearless feline Frontend Developer with 5+ cat years of experience creating modern and responsive web applications. I specialize in React, TypeScript, and chasing the red dot of inspiration",
@@ -110,19 +111,9 @@ export const skills: Skill[] = [
     color: "text-kitty-green",
   },
   {
-    name: "GraphQL",
-    icon: "logos:graphql",
-    color: "text-kitty-pink-hot",
-  },
-  {
     name: "Prisma",
     icon: "logos:prisma",
     color: "text-indigo-500",
-  },
-  {
-    name: "Docker",
-    icon: "logos:docker-icon",
-    color: "text-kitty-blue",
   },
   {
     name: "Git",
@@ -132,6 +123,17 @@ export const skills: Skill[] = [
   {
     name: "Figma",
     icon: "logos:figma",
+    color: "text-purple-500",
+  },
+  {
+    name: "GSAP",
+    icon: "logos:greensock-icon",
+    color: "text-purple-500",
+  },
+
+  {
+    name: "Framer motion",
+    icon: "logos:framer",
     color: "text-purple-500",
   },
 ];
