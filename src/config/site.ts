@@ -27,14 +27,6 @@ export const siteConfig = {
       href: "#contact",
     },
   ],
-
-  links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
-  },
 };
 
 export const aboutMe = {
@@ -146,62 +138,68 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
-    title: "Kitty Code Editor",
+    id: 1,
+    title: "Movie Hub",
+    tags: ["React JS", "Axios", "Styled-Components", "Material-UI"],
     description:
-      "A purr-fect code editor with syntax highlighting and auto-completion for all your coding needs.",
-    image: "https://picsum.photos/seed/kitty1/600/400",
-    tags: ["React", "TypeScript", "Monaco Editor"],
-    demoUrl: "https://example.com",
-    repoUrl: "https://github.com",
+      "This project is a website that catalogs the movies from Movies API and filters movies by genre. Clicking on the movie card will show a short description of the movie and its cast.",
+    image: "/assets/images/movies.jpg",
+    demoUrl: "https://movie-tv-material-ui.vercel.app/",
+    repoUrl: "https://github.com/FourSqweez/movie-tv-material-ui",
   },
   {
-    title: "Paw-some Dashboard",
+    id: 2,
+    title: "Tesla Clone",
+    tags: ["React JS", "Redux", "Styled-Components"],
     description:
-      "A dashboard with real-time analytics and cute kitty-themed visualizations.",
-    image: "https://picsum.photos/seed/kitty2/600/400",
-    tags: ["Next.js", "Tailwind CSS", "Chart.js"],
-    demoUrl: "https://example.com",
-    repoUrl: "https://github.com",
+      "I recreated the code on this Tesla website from scratch, in order to practice creating a responsive user interface project with a smooth scroll.",
+    image: "/assets/images/tesla.jpg",
+    demoUrl: "https://react-tesla-clone-redux-styled-components.vercel.app/",
+    repoUrl:
+      "https://github.com/FourSqweez/react-tesla-clone-redux-styled-components",
   },
   {
-    title: "Meow Messenger",
+    id: 3,
+    title: "Amazon Clone",
+    tags: ["Next JS", "Redux", "Tailwind"],
     description:
-      "A real-time chat application with end-to-end encryption and kitty stickers.",
-    image: "https://picsum.photos/seed/kitty3/600/400",
-    tags: ["React", "Firebase", "WebRTC"],
-    demoUrl: "https://example.com",
-    repoUrl: "https://github.com",
+      "This project is a recreation from scratch of the Amazon website user interface. I focused on writing code for website options that allow users to add products to their cart and make payments.",
+    image: "/assets/images/amazon.jpg",
+    demoUrl: "https://nextjs-amazon-clone-tailwind-redux-firebase.vercel.app/",
+    repoUrl:
+      "https://github.com/FourSqweez/nextjs-amazon-clone-tailwind-redux-nextAuth",
   },
   {
-    title: "Whisker Weather",
+    id: 4,
+    title: "Air bnb Clone",
+    tags: ["Next JS", "Tailwind"],
     description:
-      "A weather app that shows the forecast with cute kitty illustrations for each weather condition.",
-    image: "https://picsum.photos/seed/kitty4/600/400",
-    tags: ["React Native", "OpenWeather API", "Lottie"],
-    demoUrl: "https://example.com",
-    repoUrl: "https://github.com",
+      "This project is a recreation from scratch of the Airbnb website that focuses on the search and filter options for all types of accommodation, and features a responsive user interface that adapts to display requirements of various devices.",
+    image: "/assets/images/airbnb.jpg",
+    demoUrl: "https://airbnb-nextjs-tailwind-mapbox.vercel.app/",
+    repoUrl: "https://github.com/FourSqweez/airbnb-nextjs-tailwind-mapbox",
+  },
+  {
+    id: 5,
+    title: "Word Hunt",
+    tags: ["React JS", "Axios", "Styled-Components", "Material-UI"],
+    description:
+      "I created this word hunt app using the dictionary API. Users can search for words in real time and get word definitions, synonyms and an audio pronunciation guide. The app also features a toggle for dark/light display.",
+    image: "/assets/images/word-hunt.jpg",
+    demoUrl: "https://react-dictionary-mui.vercel.app/",
+    repoUrl: "https://github.com/FourSqweez/react-dictionary-mui",
   },
 ];
 
 export const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com",
+    url: "https://github.com/FourSqweez",
     icon: "mdi:github",
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/jeerasakkr/",
     icon: "mdi:linkedin",
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com",
-    icon: "mdi:twitter",
-  },
-  {
-    name: "Instagram",
-    url: "https://instagram.com",
-    icon: "mdi:instagram",
   },
 ];

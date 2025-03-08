@@ -10,7 +10,6 @@ import {
 } from "@heroui/navbar";
 import NextLink from "next/link";
 
-import { GithubIcon } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import { Button } from "@heroui/button";
 import { Icon } from "@iconify/react";
@@ -59,9 +58,9 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="basis-1 pl-4 sm:hidden" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+        {/* <Link isExternal aria-label="Github" href={socialLinks[0].url}>
           <GithubIcon className="text-default-500" />
-        </Link>
+        </Link> */}
         {/* <ThemeSwitch /> */}
         <NavbarMenuToggle />
       </NavbarContent>
