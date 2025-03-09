@@ -1,3 +1,5 @@
+"use client";
+
 import { Link } from "@heroui/link";
 import {
   Navbar as HeroUINavbar,
@@ -14,13 +16,20 @@ import { siteConfig } from "@/config/site";
 import { Button } from "@heroui/button";
 import { Icon } from "@iconify/react";
 import * as motion from "motion/react-client";
+
+import { useState } from "react";
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { navItems } = siteConfig;
+
   return (
     <HeroUINavbar
       isBlurred
       isBordered
       shouldHideOnScroll
-      className="fixed bg-white/70 backdrop-blur-md dark:bg-kitty-dark/70"
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      className="fixed bg-white/70 font-bubblegum backdrop-blur-md dark:bg-kitty-dark/70"
     >
       <NavbarBrand>
         <motion.div
@@ -37,7 +46,7 @@ export const Navbar = () => {
       </NavbarBrand>
 
       <NavbarContent className="hidden gap-4 sm:flex" justify="center">
-        {siteConfig.navItems.map((item, index) => (
+        {navItems.map((item, index) => (
           <NavbarItem key={`${item.label}-${index}`}>
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -58,9 +67,6 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="basis-1 pl-4 sm:hidden" justify="end">
-        {/* <Link isExternal aria-label="Github" href={socialLinks[0].url}>
-          <GithubIcon className="text-default-500" />
-        </Link> */}
         {/* <ThemeSwitch /> */}
         <NavbarMenuToggle />
       </NavbarContent>
@@ -97,23 +103,15 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navItems.map((item, index) => (
+      <NavbarMenu itemScope className="z-40 !overflow-hidden">
+        <div className="mx-4 mt-2 flex flex-col gap-2 font-bubblegum">
+          {navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href={item.href}
-                size="lg"
-              >
-                {item.label}
-              </Link>
+              <NextLink href={item.href}>
+                <button onClick={() => setIsMenuOpen(false)}>
+                  {item.label}
+                </button>
+              </NextLink>
             </NavbarMenuItem>
           ))}
         </div>
