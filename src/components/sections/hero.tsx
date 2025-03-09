@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden font-nunito"
+      className="relative flex min-h-screen items-center overflow-hidden pt-40 font-nunito sm:pt-0"
     >
       {/* Background gradient */}
 
@@ -30,7 +30,7 @@ export default function Hero() {
           delay={1}
         />
       </div>
-      <div className="absolute left-20 top-40 z-10">
+      <div className="absolute top-24 z-10 md:left-20 md:top-40">
         <KittyBubble
           size="lg"
           className="bg-gradient-to-br from-kitty-orange-pale to-kitty-pink"
