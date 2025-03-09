@@ -1,4 +1,4 @@
-import { siteConfig, socialLinks } from "@/config/site";
+import { resumeLinks, siteConfig, socialLinks } from "@/config/site";
 import { Icon } from "@iconify/react";
 import * as motion from "motion/react-client";
 import Link from "next/link";
@@ -57,6 +57,16 @@ export function Footer() {
                 <Icon icon={link.icon} className="h-5 w-5" />
               </a>
             ))}
+
+            <a
+              href={resumeLinks.url}
+              target="_blank"
+              title="Resume"
+              rel="noopener noreferrer"
+              className="text-kitty-dark/70 transition-colors hover:text-kitty-pink-hot dark:text-kitty-light/70 dark:hover:text-kitty-pink-hot"
+            >
+              <Icon icon={resumeLinks.icon} className="h-5 w-5" />
+            </a>
           </motion.div>
         </div>
 
