@@ -3,7 +3,7 @@ import { Experience, Project, Skill, SocialLink } from "@/types";
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
+  name: "Kitty dev Portfolio",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
