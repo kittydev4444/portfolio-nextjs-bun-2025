@@ -21,8 +21,8 @@ export function SkillCard({ skill, index }: SkillCardProps) {
     >
       <Card className="border-none shadow-md transition-all hover:shadow-lg">
         <CardBody className="flex flex-col items-center justify-center gap-3 p-6">
-          <div className={cn("text-4xl", skill.color)}>
-            <Icon icon={skill.icon} />
+          <div className={cn(`text-4xl`, skill.color)}>
+            <Icon icon={skill.icon} color={skill.color} />
           </div>
           <p className="font-medium">{skill.name}</p>
         </CardBody>
