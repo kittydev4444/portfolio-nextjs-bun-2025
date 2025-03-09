@@ -5,12 +5,6 @@ import { Icon } from "@iconify/react";
 import * as motion from "motion/react-client";
 import { HeadingSection } from "../heading-section";
 
-type Stat = {
-  icon: string;
-  label: string;
-  value: string;
-};
-
 const ExperienceComponent = ({
   description,
   icon,
@@ -33,12 +27,6 @@ const ExperienceComponent = ({
 };
 
 export default function About() {
-  const stats: Stat[] = [
-    { icon: "noto:fish", label: "Company Projects", value: "8+" },
-    { icon: "noto:mouse", label: "Personal Projects", value: "20+" },
-    { icon: "noto:yarn", label: "Yarn Balls", value: "75+" },
-  ];
-
   return (
     <section id="about" className="min-h-screen py-20">
       <div className="container mx-auto px-4">
@@ -85,7 +73,7 @@ export default function About() {
             viewport={{ once: true }}
           >
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-              {stats.map((stat, index) => (
+              {aboutMe.stats.map((stat, index) => (
                 <Card key={index} className="border-none bg-kitty-dark">
                   <CardBody className="flex flex-col items-center p-6 text-center">
                     <div className="mb-4 rounded-full bg-primary/10 p-3">
