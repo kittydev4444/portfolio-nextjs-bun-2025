@@ -37,14 +37,19 @@ export const aboutMe = {
   email: "jeerasak.dev@gmail.com",
   descriptions: [
     {
-      text: "I’m a Frontend Developer with 1.9 years of experience creating modern and responsive web applications. I specialize in React, Nextjs and Typescript.",
+      text: "I’m a Frontend Developer with 2 years of experience creating modern and responsive web applications. I specialize in React, Nextjs and Typescript.",
     },
     {
-      text: "My journey in web development started early, and over the years, I’ve built user-friendly interfaces in the startups company. Currently, I’m focused on expanding my skills as a Web3 frontend developer, connecting with smart contracts and working with networks like Ethereum and Solana.",
+      text: "My journey in web development started early, and over the years, I’ve built user-friendly interfaces at startups. Currently, I’m focused on expanding my skills as a Web3 frontend developer, working with smart contracts and networks like Ethereum and Solana. I also enjoy working on websites that are colorful, animated, and feature 3D elements.",
     },
     {
       text: "When I’m not coding, I’m exploring new technologies and tools, always looking for ways to improve and stay up-to-date in this fast-evolving field.",
     },
+  ],
+  stats: [
+    { icon: "noto:fish", label: "Company Projects", value: "8+" },
+    { icon: "noto:mouse", label: "Personal Projects", value: "20+" },
+    { icon: "noto:yarn", label: "Years of Experience", value: "2+" },
   ],
 };
 
@@ -52,7 +57,7 @@ export const experiences: Experience[] = [
   {
     icon: "noto-v1:artist-palette",
     title: "Frontend Developer",
-    description: "ChomCHOB",
+    description: "Chomchobgroup Co., Ltd.",
     period: "2022 - 2024",
     details:
       "Developed responsive web applications using React, Nextjs, TypeScript, and Tailwind CSS.",
@@ -62,9 +67,9 @@ export const experiences: Experience[] = [
 export const education: Experience[] = [
   {
     icon: "noto:graduation-cap",
-    title: "Khon Kean University",
+    title: "Khon Kaen University",
     description: "Bachelor's Degree, Computer Science",
-    period: "July 2020",
+    period: "2020",
   },
 ];
 
@@ -90,14 +95,14 @@ export const skills: Skill[] = [
     color: "text-cyan-500",
   },
   {
-    name: "Node.js",
-    icon: "logos:nodejs-icon",
-    color: "text-kitty-green",
+    name: "Three js",
+    icon: "logos:threejs",
+    color: "fill-white",
   },
   {
     name: "Prisma",
     icon: "logos:prisma",
-    color: "text-indigo-500",
+    color: "fill-white",
   },
   {
     name: "Git",
@@ -118,7 +123,7 @@ export const skills: Skill[] = [
   {
     name: "Framer motion",
     icon: "logos:framer",
-    color: "text-purple-500",
+    color: "fill-white",
   },
 ];
 
@@ -128,7 +133,7 @@ export const projects: Project[] = [
     title: "Fizzy",
     tags: ["Next JS", "Prismic", "Tailwind", "ThreeJS", "GSAP"],
     description:
-      "A 3D Project with the GSAP scrollTrigger that show the smooth animation while scrolling",
+      "A 3D interactive experience built with Next.js, Three.js, and Prismic, featuring GSAP ScrollTrigger for smooth scrolling animations. This project showcases a dynamic soda can animation that responds to user scrolling, creating an engaging and visually immersive experience.",
     image: "/assets/images/fizzy.png",
     demoUrl: "https://next14-threejs-gsap-prismic-ts.vercel.app",
     repoUrl: "https://github.com/FourSqweez/next14-threejs-gsap-prismic-ts",
@@ -138,7 +143,7 @@ export const projects: Project[] = [
     title: "Pet Soft",
     tags: ["Next JS", "NextAuth", "Zod", "Stripe", "Prisma"],
     description:
-      "Pet take care...using react 19 with server action and optimistic ui",
+      "A pet daycare management platform built with Next.js, utilizing React 19 features like server actions and optimistic UI. It helps daycare staff track pet details, including owner information, pet names, and allergies. The platform also integrates Stripe for seamless checkout when clients pick up their pets.",
     image: "/assets/images/PetSoft.jpeg",
     demoUrl: "https://petsoft-two-sigma.vercel.app/",
     repoUrl:
@@ -149,7 +154,7 @@ export const projects: Project[] = [
     title: "Rmt Dev",
     tags: ["React JS", "React Query", "Context API", "Custom hooks"],
     description:
-      "A web page for finding jobs, using react query for fetching and client catching, Context API for global state, URL State for sharing specific page with data",
+      "A job search platform built with React, featuring React Query for efficient data fetching and client-side caching. It uses Context API for global state management and URL state for sharing specific job listings. The platform includes pagination and a bookmarking feature, allowing users to save jobs for later.",
     image: "/assets/images/rmtDev.jpeg",
     demoUrl: "https://rmtdev-six.vercel.app/",
     repoUrl:
@@ -160,7 +165,7 @@ export const projects: Project[] = [
     title: "Corp Comment",
     tags: ["React JS", "Zustand"],
     description:
-      "The website to give feedback for the big company using Zustand for global state",
+      "A feedback platform built with React and Zustand for global state. Users can share experiences with companies using hashtags (e.g., “I miss the old #Spotify lyrics feature. Bring it back!”) and upvote posts to highlight key feedback.",
     image: "/assets/images/CorpComment.jpeg",
     demoUrl: "https://corpcomment-three.vercel.app/",
     repoUrl:
@@ -232,3 +237,9 @@ export const socialLinks: SocialLink[] = [
     icon: "mdi:linkedin",
   },
 ];
+
+export const resumeLinks: SocialLink = {
+  name: "Resume",
+  url: "https://drive.google.com/file/d/19KueiJP-Fe7Sq726AK4dffXe8XbnFgDM/view?usp=sharing",
+  icon: "pepicons:cv",
+};
