@@ -15,8 +15,8 @@ export function Footer() {
             viewport={{ once: true }}
             className="mb-4 flex items-center gap-2 md:mb-0"
           >
-            <Icon icon="noto:cat-face" className="h-8 w-8" />
-            <p className="bg-gradient-to-r from-kitty-pink-hot to-kitty-blue bg-clip-text text-xl font-bold text-transparent">
+            <Icon icon="noto:cat-with-tears-of-joy" className="h-8 w-8" />
+            <p className="bg-gradient-to-r from-kitty-pink-hot to-kitty-blue bg-clip-text font-bubblegum text-xl font-bold text-transparent">
               Kitty<span className="text-kitty-orange">Dev</span>
             </p>
           </motion.div>
