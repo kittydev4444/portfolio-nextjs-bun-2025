@@ -2,7 +2,7 @@ import { Button } from "@heroui/button";
 import { Icon } from "@iconify/react";
 import * as motion from "motion/react-client";
 import Image from "next/image";
-import KittyBubble from "../kitty-bubble";
+import KittyBubble, { KittyBubbleWrapper } from "../kitty-bubble";
 import RandomStars from "../random-star";
 
 export default function Hero() {
@@ -16,35 +16,35 @@ export default function Hero() {
       <RandomStars count={15} />
 
       {/* Floating kitty bubbles */}
-      <div className="absolute right-10 top-20 z-10">
+      <KittyBubbleWrapper className="right-10 top-20">
         <KittyBubble
           size="md"
           className="bg-gradient-to-br from-kitty-pink to-kitty-green-pale"
           delay={2}
         />
-      </div>
-      <div className="absolute bottom-20 left-10 z-10">
+      </KittyBubbleWrapper>
+      <KittyBubbleWrapper className="bottom-20 left-10">
         <KittyBubble
           size="sm"
           className="bg-gradient-to-br from-kitty-green-pale to-kitty-orange"
           delay={1}
         />
-      </div>
-      <div className="absolute top-24 z-10 md:left-20 md:top-40">
+      </KittyBubbleWrapper>
+      <KittyBubbleWrapper className="top-24 md:left-20 md:top-40">
         <KittyBubble
           size="lg"
           className="bg-gradient-to-br from-kitty-orange-pale to-kitty-pink"
         />
-      </div>
-      <div className="absolute bottom-40 right-20 z-10">
+      </KittyBubbleWrapper>
+      <KittyBubbleWrapper className="bottom-40 right-20">
         <KittyBubble
           size="sm"
           className="bg-gradient-to-br from-kitty-blue-light to-kitty-pink-hot"
           delay={1.5}
         />
-      </div>
+      </KittyBubbleWrapper>
 
-      <div className="container z-10 mx-auto px-4">
+      <div className="container z-20 mx-auto px-4">
         <div className="flex flex-col items-center justify-between gap-12 md:flex-row">
           <motion.div
             initial={{ opacity: 0, x: -50 }}

@@ -1,12 +1,13 @@
 "use client";
 
+import { KittyIcons } from "@/types";
 import { Icon } from "@iconify/react";
 import * as motion from "motion/react-client";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "../utils/cn";
 
 // Define all available icons
-const allIcons = [
+export const allKittyIcons = [
   "cat-face",
   "cat",
   "grinning-cat-face",
@@ -22,11 +23,9 @@ const allIcons = [
   "black-cat",
 ] as const;
 
-type Icons = (typeof allIcons)[number];
-
 type KittyBubbleProps = {
   className?: string;
-  icon?: Icons;
+  icon?: KittyIcons;
   size?: "sm" | "md" | "lg";
   color?: string;
   delay?: number;
@@ -41,7 +40,9 @@ export default function KittyBubble({
   delay = 0,
   animate = true,
 }: KittyBubbleProps) {
-  const [currentIcon, setCurrentIcon] = useState<Icons>(icon || allIcons[0]);
+  const [currentIcon, setCurrentIcon] = useState<KittyIcons>(
+    icon || allKittyIcons[0],
+  );
 
   useEffect(() => {
     if (icon) return;
@@ -51,7 +52,8 @@ export default function KittyBubble({
         let newIcon;
 
         do {
-          newIcon = allIcons[Math.floor(Math.random() * allIcons.length)];
+          newIcon =
+            allKittyIcons[Math.floor(Math.random() * allKittyIcons.length)];
         } while (newIcon === prevIcon); // Ensure it changes
 
         return newIcon;
@@ -73,15 +75,6 @@ export default function KittyBubble({
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
       transition={{ duration: 0.5, delay }}
-      // initial={{ y: 0 }}
-      // animate={{ y: [-10, 10, -10] }}
-      // transition={{
-      //   duration: 4,
-      //   repeat: Infinity,
-      //   repeatType: "loop",
-      //   ease: "easeInOut",
-      //   delay,
-      // }}
       className={cn(
         "flex items-center justify-center rounded-full p-3",
         sizeClasses[size],
@@ -103,3 +96,13 @@ export default function KittyBubble({
     </motion.div>
   );
 }
+
+export const KittyBubbleWrapper = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className: string;
+}) => {
+  return <div className={cn("absolute z-10", className)}>{children}</div>;
+};

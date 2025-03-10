@@ -13,7 +13,7 @@ type StarProps = {
 function Star({ top, left, size, delay }: StarProps) {
   return (
     <div
-      className="star absolute"
+      className="star absolute z-10"
       style={{
         top,
         left,
