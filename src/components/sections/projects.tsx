@@ -3,6 +3,7 @@ import { ProjectCard } from "../project-card";
 import RandomStars from "../random-star";
 
 import { projects } from "@/config/site";
+import KittyIcon from "../kitty-icon";
 
 export default function Projects() {
   return (
@@ -10,6 +11,9 @@ export default function Projects() {
       <RandomStars count={8} />
 
       <div className="container relative z-10 mx-auto px-4">
+        <div className="mb-2 flex justify-center">
+          <KittyIcon icon="cat-with-wry-smile" />
+        </div>
         <HeadingSection
           title="My Purrjects"
           subtitle="Check out some of my recent work"

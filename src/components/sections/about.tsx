@@ -4,6 +4,9 @@ import { Card, CardBody } from "@heroui/card";
 import { Icon } from "@iconify/react";
 import * as motion from "motion/react-client";
 import { HeadingSection } from "../heading-section";
+import KittyBubble, { KittyBubbleWrapper } from "../kitty-bubble";
+import KittyIcon from "../kitty-icon";
+import RandomStars from "../random-star";
 
 const ExperienceComponent = ({
   description,
@@ -28,7 +31,17 @@ const ExperienceComponent = ({
 
 export default function About() {
   return (
-    <section id="about" className="min-h-screen py-20">
+    <section id="about" className="relative min-h-screen py-20">
+      <RandomStars count={10} />
+
+      <KittyBubbleWrapper className="left-2 top-20 sm:left-56">
+        <KittyBubble
+          size="md"
+          className="bg-gradient-to-br from-kitty-pink to-kitty-green-pale"
+          delay={2}
+        />
+      </KittyBubbleWrapper>
+
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +51,7 @@ export default function About() {
           className="mb-12 text-center"
         >
           <div className="mb-2 flex justify-center">
-            <Icon icon={aboutMe.icon} className="text-4xl" />
+            <KittyIcon icon="grinning-cat-face-with-smiling-eyes" />
           </div>
           <HeadingSection title={aboutMe.header} subtitle={aboutMe.subHeader} />
         </motion.div>
@@ -51,7 +64,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="text-light border-none bg-kitty-dark">
+            <Card className="text-light z-20 border-none bg-kitty-dark">
               <CardBody>
                 <h3 className="text-accent-yellow mb-4 text-xl font-semibold">
                   {aboutMe.title}

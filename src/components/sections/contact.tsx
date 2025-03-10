@@ -6,6 +6,7 @@ import { Icon } from "@iconify/react";
 import * as motion from "motion/react-client";
 import { HTMLProps } from "react";
 import { HeadingSection } from "../heading-section";
+import KittyIcon from "../kitty-icon";
 import RandomStars from "../random-star";
 
 export default function Contact() {
@@ -14,6 +15,9 @@ export default function Contact() {
       <RandomStars count={10} />
 
       <div className="container relative z-10 mx-auto px-4">
+        <div className="mb-2 flex justify-center">
+          <KittyIcon icon="smiling-cat-face-with-heart-eyes" />
+        </div>
         <HeadingSection
           title="Meow At Me!"
           subtitle="Have a question or want to work together? Let's chat!"

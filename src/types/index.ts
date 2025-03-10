@@ -1,3 +1,4 @@
+import { allKittyIcons } from "@/components/kitty-bubble";
 import { SVGProps } from "react";
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
@@ -33,3 +34,5 @@ export type SocialLink = {
   url: string;
   icon: string;
 };
+
+export type KittyIcons = (typeof allKittyIcons)[number];

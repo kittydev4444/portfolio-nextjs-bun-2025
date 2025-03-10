@@ -30,7 +30,7 @@ export const siteConfig = {
 };
 
 export const aboutMe = {
-  icon: "noto:cat-face",
+  icon: "noto:grinning-cat-with-smiling-eyes",
   header: "About This Kitty",
   subHeader: "Get to know the hero behind the whiskers",
   title: "Who am I?",
@@ -121,7 +121,7 @@ export const skills: Skill[] = [
   },
 
   {
-    name: "Framer motion",
+    name: "Motion",
     icon: "logos:framer",
     color: "fill-white",
   },
