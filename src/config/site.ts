@@ -34,7 +34,7 @@ export const aboutMe = {
   header: "About This Kitty",
   subHeader: "Get to know the hero behind the whiskers",
   title: "Who am I?",
-  email: "jeerasak.dev@gmail.com",
+  email: "jeerasak.code@gmail.com",
   descriptions: [
     {
       text: "I’m a Frontend Developer with 2 years of experience creating modern and responsive web applications. I specialize in React, Nextjs and Typescript.",
@@ -136,7 +136,7 @@ export const projects: Project[] = [
       "A 3D interactive experience built with Next.js, Three.js, and Prismic, featuring GSAP ScrollTrigger for smooth scrolling animations. This project showcases a dynamic soda can animation that responds to user scrolling, creating an engaging and visually immersive experience.",
     image: "/assets/images/fizzy.png",
     demoUrl: "https://next14-threejs-gsap-prismic-ts.vercel.app",
-    repoUrl: "https://github.com/FourSqweez/next14-threejs-gsap-prismic-ts",
+    repoUrl: "https://github.com/kittydev4444/next14-threejs-gsap-prismic-ts",
   },
   {
     id: 7,
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     image: "/assets/images/PetSoft.jpeg",
     demoUrl: "https://petsoft-two-sigma.vercel.app/",
     repoUrl:
-      "https://github.com/FourSqweez/modern-react-nextjs-courses/tree/main/petsoft",
+      "https://github.com/kittydev4444/modern-react-nextjs-courses/tree/main/petsoft",
   },
   {
     id: 8,
@@ -158,7 +158,7 @@ export const projects: Project[] = [
     image: "/assets/images/rmtDev.jpeg",
     demoUrl: "https://rmtdev-six.vercel.app/",
     repoUrl:
-      "https://github.com/FourSqweez/modern-react-nextjs-courses/tree/main/rmtdev",
+      "https://github.com/kittydev4444/modern-react-nextjs-courses/tree/main/rmtdev",
   },
   {
     id: 9,
@@ -169,7 +169,7 @@ export const projects: Project[] = [
     image: "/assets/images/CorpComment.jpeg",
     demoUrl: "https://corpcomment-three.vercel.app/",
     repoUrl:
-      "https://github.com/FourSqweez/modern-react-nextjs-courses/tree/main/corpcomment",
+      "https://github.com/kittydev4444/modern-react-nextjs-courses/tree/main/corpcomment",
   },
   {
     id: 1,
@@ -179,7 +179,7 @@ export const projects: Project[] = [
       "This project is a website that catalogs the movies from Movies API and filters movies by genre. Clicking on the movie card will show a short description of the movie and its cast.",
     image: "/assets/images/movies.jpg",
     demoUrl: "https://movie-tv-material-ui.vercel.app/",
-    repoUrl: "https://github.com/FourSqweez/movie-tv-material-ui",
+    repoUrl: "https://github.com/kittydev4444/movie-tv-material-ui",
   },
   {
     id: 2,
@@ -190,7 +190,7 @@ export const projects: Project[] = [
     image: "/assets/images/tesla.jpg",
     demoUrl: "https://react-tesla-clone-redux-styled-components.vercel.app/",
     repoUrl:
-      "https://github.com/FourSqweez/react-tesla-clone-redux-styled-components",
+      "https://github.com/kittydev4444/react-tesla-clone-redux-styled-components",
   },
   {
     id: 3,
@@ -201,7 +201,7 @@ export const projects: Project[] = [
     image: "/assets/images/amazon.jpg",
     demoUrl: "https://nextjs-amazon-clone-tailwind-redux-firebase.vercel.app/",
     repoUrl:
-      "https://github.com/FourSqweez/nextjs-amazon-clone-tailwind-redux-nextAuth",
+      "https://github.com/kittydev4444/nextjs-amazon-clone-tailwind-redux-nextAuth",
   },
   {
     id: 4,
@@ -211,7 +211,7 @@ export const projects: Project[] = [
       "This project is a recreation from scratch of the Airbnb website that focuses on the search and filter options for all types of accommodation, and features a responsive user interface that adapts to display requirements of various devices.",
     image: "/assets/images/airbnb.jpg",
     demoUrl: "https://airbnb-nextjs-tailwind-mapbox.vercel.app/",
-    repoUrl: "https://github.com/FourSqweez/airbnb-nextjs-tailwind-mapbox",
+    repoUrl: "https://github.com/kittydev4444/airbnb-nextjs-tailwind-mapbox",
   },
   {
     id: 5,
@@ -221,14 +221,14 @@ export const projects: Project[] = [
       "I created this word hunt app using the dictionary API. Users can search for words in real time and get word definitions, synonyms and an audio pronunciation guide. The app also features a toggle for dark/light display.",
     image: "/assets/images/word-hunt.jpg",
     demoUrl: "https://react-dictionary-mui.vercel.app/",
-    repoUrl: "https://github.com/FourSqweez/react-dictionary-mui",
+    repoUrl: "https://github.com/kittydev4444/react-dictionary-mui",
   },
 ];
 
 export const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com/FourSqweez",
+    url: "https://github.com/kittydev4444",
     icon: "mdi:github",
   },
   {
